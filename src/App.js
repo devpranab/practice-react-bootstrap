@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Card, Spinner, Accordion, Badge } from 'react-bootstrap';
+import { Button, Card, Spinner, Accordion, Badge, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 function App() {
   return (
@@ -64,6 +64,32 @@ function App() {
       Profile <Badge bg="secondary">9</Badge>
       <span className="visually-hidden">unread messages</span>
     </Button>
+
+    {/* Navbar */}
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">my-LOGO</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+
 
     </div>
   );
