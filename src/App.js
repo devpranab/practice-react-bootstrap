@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Card, Spinner, Accordion } from 'react-bootstrap';
+import { Button, Card, Spinner, Accordion, Badge } from 'react-bootstrap';
 
 function App() {
   return (
@@ -58,6 +58,12 @@ function App() {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+
+    {/* Badge */}
+    <Button variant="primary mt-4">
+      Profile <Badge bg="secondary">9</Badge>
+      <span className="visually-hidden">unread messages</span>
+    </Button>
 
     </div>
   );
