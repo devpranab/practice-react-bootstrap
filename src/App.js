@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Spinner } from 'react-bootstrap';
 
 function App() {
   return (
@@ -25,6 +25,11 @@ function App() {
         <Button variant="primary">Click more</Button>
       </Card.Body>
     </Card>
+
+    {/* Spinner */}
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
 
 
     </div>
