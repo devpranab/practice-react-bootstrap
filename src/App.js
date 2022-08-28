@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Card, Spinner, Accordion, Badge, Container, Nav, Navbar, NavDropdown, ListGroup } from 'react-bootstrap';
+import { Button, Card, Spinner, Accordion, Badge, Container, Nav, Navbar, NavDropdown, ListGroup, Form } from 'react-bootstrap';
 import TopLine from './News/TopLine';
 
 function App() {
@@ -101,7 +101,32 @@ function App() {
     </ListGroup>
 
     {/* NewsCard */}
-<TopLine/>
+     <TopLine/>
+
+    {/* Form */}
+    <>
+    <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+    </>
+
     </div>
   );
 }
