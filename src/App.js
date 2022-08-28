@@ -1,8 +1,11 @@
 import './App.css';
-import { Button, Card, Spinner, Accordion, Badge, Container, Nav, Navbar, NavDropdown, ListGroup, Form } from 'react-bootstrap';
+import { Button, Card, Spinner, Accordion, Badge, Container, Nav, Navbar, NavDropdown, ListGroup, Form, Collapse } from 'react-bootstrap';
 import TopLine from './News/TopLine';
+import { useState } from 'react';
 
 function App() {
+  const [open, setOpen] = useState(false);
+  
   return (
     <div className="App">
       <p>bootstrap - class based</p>
@@ -126,6 +129,24 @@ function App() {
       </Button>
     </Form>
     </>
+
+    {/* utilities/transitions */}
+    <div className="mt-4">
+      <Button
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+      >
+        click
+      </Button>
+      <Collapse in={open}>
+        <div id="example-collapse-text">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+          terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+          labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </Collapse>
+    </div>
 
     </div>
   );
