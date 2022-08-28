@@ -1,5 +1,6 @@
 import './App.css';
-import { Button, Card, Spinner, Accordion, Badge, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Card, Spinner, Accordion, Badge, Container, Nav, Navbar, NavDropdown, ListGroup } from 'react-bootstrap';
+import TopLine from './News/TopLine';
 
 function App() {
   return (
@@ -66,7 +67,7 @@ function App() {
     </Button>
 
     {/* Navbar */}
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light mt-4" expand="lg">
       <Container>
         <Navbar.Brand href="#home">my-LOGO</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -90,7 +91,17 @@ function App() {
       </Container>
     </Navbar>
 
+    {/* ListGroup */}
+    <ListGroup>
+      <ListGroup.Item>Cras justo odio</ListGroup.Item>
+      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+    </ListGroup>
 
+    {/* NewsCard */}
+<TopLine/>
     </div>
   );
 }
